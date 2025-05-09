@@ -24,9 +24,8 @@
 
 body {
   margin: 0;
+  padding: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: 'Inter', 'Slabo', Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

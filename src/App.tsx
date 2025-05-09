@@ -8,21 +8,24 @@ import { ToastContainer } from 'react-toastify';
 
 const App: React.FC = () => {
   return (
-    <>
+    <div className="w-full">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/page2" element={<Page2 />} />
+
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="home" element={<Home />} />
+            <Route path="page2" element={<Page2 />} />
+          </Route>
         </Routes>
       </BrowserRouter>
+
       <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
       />
-    </>
+    </div>
   );
 };
 
